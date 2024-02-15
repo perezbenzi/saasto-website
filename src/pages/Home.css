@@ -1,0 +1,87 @@
+.background-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: url('../assets/card-screens.png') no-repeat center center;
+    background-size: 52%;
+    background-position-x: 92%;
+    background-position-y: 40%;
+    margin-top: 50px;
+  }
+
+  .dots {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 114px;
+    height: 114px;
+  }
+
+  .gradient-dot {
+    height: 500px;
+    width: 500px;
+    background: radial-gradient(circle closest-side, #8976FD 0%, transparent 100%);
+    position: absolute;
+    top: -2%;
+    left: -8%;
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+
+  .tnt {
+    width: 188px;
+    height: 188px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+  
+  .background-image, .background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease; /* Suaviza la transición de la opacidad */
+  }
+  
+  .container {
+    height: 100vh;
+    width: 1108px;
+  }
+  
+  .background-gradient {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    opacity: 0; /* Oculto inicialmente */
+  }
+
+.title-home {
+    font-family: 'Poppins', sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    width: 628px;
+    line-height: 67px;
+}
+
+.text-div {
+    text-align: start;
+    position: absolute;
+    top: 14%;
+}
+
+.text-home {
+    color: #1c0e0dcc;
+    line-height: 29px;
+    width: 465px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}

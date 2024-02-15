@@ -1,0 +1,13 @@
+.logo-navbar {
+    width: 178px;
+    height: 39px;
+}
+
+
+.line {
+    position: absolute;
+    left: 0;
+    top: -10;
+    width: 6vh;
+    height: 11vh;
+  }

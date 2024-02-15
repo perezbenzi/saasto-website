@@ -1,0 +1,28 @@
+.button {
+    width: 206px;
+    height: 63px;
+    background-color: #8976FD;
+    border: none;
+    color: #Ffff;
+    border-radius: 15px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+}
+
+.button:hover {
+    background-color: #806dffc6;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.button:active {
+    background-color: #ada9c5c6;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
