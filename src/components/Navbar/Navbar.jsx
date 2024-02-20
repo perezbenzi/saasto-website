@@ -12,6 +12,7 @@ import logo from '../../assets/logo.png';
 import { useTheme } from '@mui/material/styles';
 import { Drawer, useMediaQuery } from '@mui/material';
 import line from '../../assets/line.png';
+import { useEffect, useState } from 'react';
 
 const pages = ['Home', 'About us', 'Services', 'Blog', 'Contact us'];
 
@@ -19,6 +20,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const theme = useTheme();
+  const [scrolled, setScrolled] = useState(false);
 
   // const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const matches = useMediaQuery('(max-width:1050px)');
@@ -38,6 +40,21 @@ function Navbar() {
     setAnchorElUser(null);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    // Añade el evento de escucha al montar el componente
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpia el evento de escucha al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <AppBar
       position="fixed"
@@ -50,6 +67,7 @@ function Navbar() {
           fontSize: '18px',
         },
       }}
+      style={{ backgroundColor: scrolled ? '#ffff' : 'transparent', transition: 'background-color 0.8s ease' }}
     >
       <Container>
         <img src={line} alt="line" className="line" />

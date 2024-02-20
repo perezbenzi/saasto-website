@@ -1,7 +1,8 @@
 .background-wrapper {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ajusta esto según tus necesidades */
+    height: 100vh;
+    /* Ajusta esto según tus necesidades */
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10,17 +11,17 @@
     background-position-x: 92%;
     background-position-y: 40%;
     margin-top: 50px;
-  }
+}
 
-  .dots {
+.dots {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 114px;
     height: 114px;
-  }
+}
 
-  .gradient-dot {
+.gradient-dot {
     height: 500px;
     width: 500px;
     background: radial-gradient(circle closest-side, #8976FD 0%, transparent 100%);
@@ -29,34 +30,26 @@
     left: -8%;
     border-radius: 50%;
     opacity: 0.2;
-  }
+}
 
-  .tnt {
+.tnt {
     width: 188px;
     height: 188px;
     position: absolute;
     top: 0%;
     left: 0%;
-  }
-  
-  .background-image, .background-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease; /* Suaviza la transición de la opacidad */
-  }
-  
-  .container {
+}
+
+.container {
     height: 100vh;
     width: 1108px;
-  }
-  
-  .background-gradient {
+}
+
+.background-gradient {
     background: linear-gradient(to right, #ff7e5f, #feb47b);
-    opacity: 0; /* Oculto inicialmente */
-  }
+    opacity: 0;
+    /* Oculto inicialmente */
+}
 
 .title-home {
     font-family: 'Poppins', sans-serif;
@@ -82,6 +75,127 @@
     font-weight: 300;
     font-style: normal;
     font-variation-settings:
-      "wdth" 100,
-      "YTLC" 500;
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+.data-section-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.data-section {
+    width: 1108px;
+}
+
+.data-icons {
+    width: 248px;
+    height: 248px;
+}
+
+.data-item {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    text-align: start;
+}
+
+.data-number {
+    color: #332C5C;
+    line-height: 29px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 48px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+.data-name {
+    color: #332C5C;
+    line-height: 29px;
+    font-family: "Poppins Sans", sans-serif;
+    font-size: 19px;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+/*---------------- Mobile ----------------*/
+
+@media (max-width: 425px) {
+
+    #root {
+        margin: -7px;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .gradient-dot {
+        position: absolute;
+        top: -29%;
+        left: -59%;
+    }
+
+    .container {
+        padding: 24px;
+    }
+
+    .css-10zq77k-MuiToolbar-root {
+        min-height: 76px !important;
+        }
+    
+    .logo-navbar {
+        width: 133px;
+        height: 30px;
+    }
+
+    .background-wrapper {
+        background: url(/src/assets/card-screen-mobile.png) no-repeat center center;
+        background-size: 92%;
+        background-position-x: 50%;
+        background-position-y: 85%;
+    }
+    
+
+    .title-home {
+        font-size: 28px;
+        font-weight: 600;
+        width: 276px;
+        line-height: 39px;
+    }
+
+    .text-home {
+        line-height: 29px;
+        width: 314px;
+        font-size: 16px;
+    }
+
+    .background-wrapper {
+        margin-top: 0px;
+        padding-top: 60px;
+    }
+
+    .text-div {
+        text-align: start;
+        position: absolute;
+        top: 10%;
+    }
+
+    .data-item {
+        display: block;
+    }
+
+    .text-content {
+        text-align: center;
+    }
 }
