@@ -26,3 +26,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease; 
 }
+
+@media (max-width: 425px) {
+    .button {
+        width: 159px;
+        height: 53px;
+        font-size: 14px;
+    }
+}
